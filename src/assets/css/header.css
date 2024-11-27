@@ -1,0 +1,116 @@
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+  border: 2px solid var(--text);
+  border-radius: 12px;
+  gap: 3rem;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.header-logo {
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text);
+  margin: 0;
+}
+
+.header-nav {
+  display: flex;
+  gap: 3rem;
+}
+
+.header-nav a {
+  font-family: var(--font-title);
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.header-nav a:hover {
+  color: var(--title);
+  transform: scale(1.1);
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle .burger-line {
+  height: 3px;
+  width: 100%;
+  background-color: var(--text);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: 1rem 2rem;
+  }
+
+  .header-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    gap: 1rem;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--primary);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  }
+
+  .header-nav.active {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(10px);
+  }
+
+  .header-nav a {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text);
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .header-nav a:hover {
+    background-color: var(--accent);
+    color: var(--primary);
+    transform: scale(1.05);
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}

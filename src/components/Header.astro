@@ -1,0 +1,38 @@
+---
+import '../assets/css/header.css';
+---
+<header class="header">
+  <div class="header-container">
+    <!-- Logo temporaire -->
+    <span class="header-logo">Mon Logo</span>
+
+    <!-- Bouton menu toggle -->
+    <button class="menu-toggle" aria-label="Ouvrir le menu">
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+    </button>
+
+    <nav class="header-nav" aria-label="Navigation principale">
+      <a href="#about" title="En savoir plus sur moi">À propos</a>
+      <a href="#projects" title="Voir mes projets">Projets</a>
+      <a href="#services" title="Consulter les services proposés">Services</a>
+      <a href="#contact" title="Me contacter">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  if (typeof document !== 'undefined') {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const headerNav = document.querySelector('.header-nav');
+
+    if (menuToggle && headerNav) {
+      menuToggle.addEventListener('click', () => {
+        headerNav.classList.toggle('active');
+      });
+    } else {
+      console.error('Menu toggle or navigation not found');
+    }
+  }
+</script>
