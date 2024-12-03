@@ -1,11 +1,68 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+import '../assets/css/hero.css';
 ---
 
 <BaseLayout title="Accueil | Mon Site Perso">
-  <section>
-    <h1>Bienvenue sur mon site !</h1>
-    <h2>Rajdhani pour les titres</h2>
-    <p>Ce texte utilise <strong>Inter Regular</strong>, une police moderne et lisible.</p>
+  <section class="hero">
+    <div class="hero-container">
+      <h1 class="hero-title">
+        Bonjour, je suis <span class="highlight">Guillaume</span>,
+        <span id="animated-text" aria-live="polite" data-words='["Développeur Web", "Designer Créatif", "Passionné de Technologie"]'></span>
+      </h1>
+      
+      
+      <p class="hero-subtitle">Je crée des expériences web modernes, rapides et dynamiques.</p>
+      <a href="#projects" class="hero-cta" aria-label="Voir mes projets">Voir mes projets</a>
+    </div>
+    <div class="hero-background"></div>
   </section>
+  
 </BaseLayout>
+
+<script>
+// @ts-nocheck
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('[data-words]').forEach((animatedText) => {
+    const words = JSON.parse(animatedText.getAttribute('data-words'));
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+      const currentWord = words[wordIndex];
+
+      if (charIndex === 0 && !isDeleting) {
+        animatedText.style.visibility = "visible";
+        animatedText.style.opacity = "1";
+      }
+
+      if (!isDeleting) {
+        animatedText.textContent = currentWord.slice(0, ++charIndex);
+        if (charIndex === currentWord.length) {
+          isDeleting = true;
+          setTimeout(typeEffect, 1000);
+          return;
+        }
+      } else {
+        animatedText.textContent = currentWord.slice(0, --charIndex);
+        if (charIndex === 0) {
+          isDeleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+        }
+      }
+
+      setTimeout(typeEffect, isDeleting ? 100 : 200);
+    }
+
+    animatedText.textContent = "";
+
+    setTimeout(() => {
+      typeEffect();
+    }, 500);
+  });
+});
+
+
+</script>
