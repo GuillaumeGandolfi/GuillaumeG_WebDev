@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 import '../assets/css/hero.css';
+import '../assets/css/about.css';
 ---
 
 <BaseLayout title="Accueil | Mon Site Perso">
@@ -17,6 +18,21 @@ import '../assets/css/hero.css';
       <a href="#projects" class="hero-cta" aria-label="Voir mes projets">Voir mes projets</a>
     </div>
     <div class="hero-background"></div>
+  </section>
+
+  <section class="about-me" id="about">
+    <div class="about-container">
+      <h2>À Propos de Moi</h2>
+      <p>
+        Passionné par le développement web, je crée des expériences modernes et dynamiques.
+        Avec une expertise en HTML, CSS et JavaScript, je transforme des idées en sites fonctionnels
+        et attrayants. Toujours curieux, j'apprends constamment de nouvelles technologies pour
+        repousser mes limites.
+      </p>
+      <p>
+        Mon objectif ? Collaborer pour concevoir des solutions web qui ont un impact. Créons ensemble quelque chose d'incroyable !
+      </p>
+    </div>
   </section>
   
 </BaseLayout>
@@ -62,6 +78,24 @@ document.addEventListener('DOMContentLoaded', () => {
       typeEffect();
     }, 500);
   });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const paragraphs = document.querySelectorAll('.about-container p');
+
+  const revealOnScroll = () => {
+    const triggerPoint = window.innerHeight / 1.2;
+
+    paragraphs.forEach((p) => {
+      const top = p.getBoundingClientRect().top;
+
+      if (top < triggerPoint) {
+        p.classList.add('visible');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', revealOnScroll);
 });
 
 

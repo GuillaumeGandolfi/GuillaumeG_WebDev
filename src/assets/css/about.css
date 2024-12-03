@@ -1,0 +1,94 @@
+.about-me {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 20vh;
+  padding: 3rem 2rem;
+  z-index: 2;
+}
+
+.about-container {
+  max-width: 800px;
+  color: var(--text);
+  font-family: var(--font-body);
+}
+
+.about-container h2 {
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  color: var(--title);
+  margin-bottom: 1.5rem;
+}
+
+.about-container p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.about-container p:nth-child(1) {
+  transition-delay: 0.2s;
+}
+
+.about-container p:nth-child(2) {
+  transition-delay: 0.4s;
+}
+
+.about-container p.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Tablettes : Écrans moyens (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .about-me {
+    padding: 2rem; /* Réduction du padding */
+  }
+
+  .about-container h2 {
+    font-size: 2rem; /* Titre réduit */
+  }
+
+  .about-container p {
+    font-size: 1rem; /* Texte plus petit */
+  }
+}
+
+/* Mobiles : Écrans petits (max-width: 768px) */
+@media (max-width: 768px) {
+  .about-me {
+    padding: 1.5rem; /* Réduction supplémentaire du padding */
+  }
+
+  .about-container {
+    max-width: 90%; /* Réduit la largeur disponible */
+  }
+
+  .about-container h2 {
+    font-size: 1.8rem; /* Titre plus petit */
+  }
+
+  .about-container p {
+    font-size: 0.95rem; /* Texte encore réduit */
+  }
+}
+
+/* Très petits écrans (max-width: 480px) */
+@media (max-width: 480px) {
+  .about-me {
+    padding: 1rem; /* Padding minimal */
+  }
+
+  .about-container h2 {
+    font-size: 1.6rem; /* Titre compact */
+  }
+
+  .about-container p {
+    font-size: 0.9rem; /* Texte compact */
+  }
+}

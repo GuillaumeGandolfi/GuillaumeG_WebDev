@@ -1,11 +1,10 @@
-/* Styles pour la Hero Section existants */
 .hero {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 100vh;
+  min-height: 40vh;
   background-color: var(--primary);
   background-image: url("/textures/black-linen.png");
   background-repeat: repeat;
@@ -27,6 +26,7 @@
   transform: translate(-50%, -50%) scale(1);
   animation: move-shadow 6s infinite alternate ease-in-out;
   z-index: 0;
+  pointer-events: none;
 }
 
 @keyframes move-shadow {
@@ -47,8 +47,10 @@
 .hero-container {
   position: relative;
   z-index: 10;
-  max-width: 800px;
-  padding: 2rem; /* Ajout d'un padding global */
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
 }
 
 .hero-title {
@@ -64,6 +66,7 @@
 #animated-text {
   visibility: hidden;
   opacity: 0;
+  white-space: nowrap;
   transition: opacity 0.3s ease;
 }
 
@@ -97,53 +100,49 @@
   }
 }
 
-/* Responsive Styles */
-
-/* Tablettes : Écrans moyens (max-width: 1024px) */
 @media (max-width: 1024px) {
   .hero {
     min-height: 0;
   }
 
   .hero-container {
-    padding: 1.5rem; /* Réduction du padding */
+    padding: 1.5rem;
   }
 
   .hero-title {
-    font-size: 2.5rem; /* Réduction de la taille du titre */
+    font-size: 2.5rem;
   }
 
   .hero-subtitle {
-    font-size: 1.3rem; /* Réduction du sous-titre */
+    font-size: 1.3rem;
   }
 
   .hero-cta {
-    font-size: 0.9rem; /* Ajuste le bouton */
+    font-size: 0.9rem;
     padding: 0.6rem 1.2rem;
   }
 
   .hero::before {
-    width: 400px; /* Cercle animé réduit */
+    width: 400px;
     height: 400px;
   }
 }
 
-/* Mobiles : Écrans petits (max-width: 768px) */
 @media (max-width: 768px) {
   .hero {
     min-height: 0;
   }
 
   .hero-container {
-    padding: 1rem; /* Réduction supplémentaire du padding */
+    padding: 1rem;
   }
 
   .hero-title {
-    font-size: 2rem; /* Taille compacte pour le titre */
+    font-size: 2rem;
   }
 
   .hero-subtitle {
-    font-size: 1rem; /* Sous-titre réduit */
+    font-size: 1rem;
   }
 
   .hero-cta {
@@ -152,23 +151,22 @@
   }
 
   .hero::before {
-    width: 300px; /* Cercle animé réduit */
+    width: 300px;
     height: 300px;
   }
 }
 
-/* Très petits écrans (max-width: 480px) */
 @media (max-width: 480px) {
   .hero {
     min-height: 0;
   }
 
   .hero-container {
-    padding: 0.5rem; /* Padding minimum */
+    padding: 0.5rem;
   }
 
   .hero-title {
-    font-size: 1.8rem; /* Titre plus petit */
+    font-size: 1.8rem;
   }
 
   .hero-subtitle {
@@ -176,12 +174,12 @@
   }
 
   .hero-cta {
-    font-size: 0.7rem; /* Bouton plus compact */
+    font-size: 0.7rem;
     padding: 0.5rem 0.8rem;
   }
 
   .hero::before {
-    width: 250px; /* Cercle encore plus petit */
+    width: 250px;
     height: 250px;
   }
 }
