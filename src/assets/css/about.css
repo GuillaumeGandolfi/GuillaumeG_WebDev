@@ -44,51 +44,48 @@
   transform: translateY(0);
 }
 
-/* Tablettes : Écrans moyens (max-width: 1024px) */
 @media (max-width: 1024px) {
   .about-me {
-    padding: 2rem; /* Réduction du padding */
+    padding: 2rem;
   }
 
   .about-container h2 {
-    font-size: 2rem; /* Titre réduit */
+    font-size: 2rem;
   }
 
   .about-container p {
-    font-size: 1rem; /* Texte plus petit */
+    font-size: 1rem;
   }
 }
 
-/* Mobiles : Écrans petits (max-width: 768px) */
 @media (max-width: 768px) {
   .about-me {
-    padding: 1.5rem; /* Réduction supplémentaire du padding */
+    padding: 1.5rem;
   }
 
   .about-container {
-    max-width: 90%; /* Réduit la largeur disponible */
+    max-width: 90%;
   }
 
   .about-container h2 {
-    font-size: 1.8rem; /* Titre plus petit */
+    font-size: 1.8rem;
   }
 
   .about-container p {
-    font-size: 0.95rem; /* Texte encore réduit */
+    font-size: 0.95rem;
   }
 }
 
-/* Très petits écrans (max-width: 480px) */
 @media (max-width: 480px) {
   .about-me {
-    padding: 1rem; /* Padding minimal */
+    padding: 1rem;
   }
 
   .about-container h2 {
-    font-size: 1.6rem; /* Titre compact */
+    font-size: 1.6rem;
   }
 
   .about-container p {
-    font-size: 0.9rem; /* Texte compact */
+    font-size: 0.9rem;
   }
 }

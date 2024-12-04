@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 import '../assets/css/hero.css';
 import '../assets/css/about.css';
+import '../assets/css/skill.css';
 ---
 
 <BaseLayout title="Accueil | Mon Site Perso">
@@ -34,6 +35,46 @@ import '../assets/css/about.css';
       </p>
     </div>
   </section>
+
+  <section class="skills" id="skills">
+    <h2>Ce que je peux vous offrir</h2>
+    <div class="skills-container">
+      <article class="skill-card">
+        <img src="/icons/performant.svg" alt="Icône représentant la performance" aria-label="Performance" loading="lazy"/>
+        <h3>Sites Performants</h3>
+        <p>Créés avec Astro, mes sites chargent rapidement et offrent une excellente expérience utilisateur.</p>
+      </article>
+      <article class="skill-card">
+        <img src="/icons/accessibility.svg" alt="Icône représentant l'accessibilité" aria-label="Accessibilité" loading="lazy"/>
+        <h3>Accessibilité</h3>
+        <p>Des sites inclusifs, accessibles à tous, respectant les meilleures pratiques d'accessibilité.</p>
+      </article>
+      <article class="skill-card">
+        <img src="/icons/responsive.svg" alt="Icône représentant un smartphone" aria-label="Mobile Friendly" loading="lazy"/>
+        <h3>Mobile Friendly</h3>
+        <p>Un design adaptatif qui fonctionne parfaitement sur tous les appareils, des téléphones aux écrans larges.</p>
+      </article>
+      <article class="skill-card">
+        <img src="/icons/seo.svg" alt="Icône représentant une loupe" aria-label="SEO Optimisé" loading="lazy"/>
+        <h3>SEO Optimisé</h3>
+        <p>Des sites bien référencés, grâce à une structure propre et des optimisations adaptées.</p>
+      </article>
+      <article class="skill-card">
+        <img src="/icons/design.svg" alt="Icône représentant le design moderne" aria-label="Design Moderne" loading="lazy"/>
+        <h3>Design Moderne</h3>
+        <p>Création d’interfaces esthétiques et intuitives, adaptées aux besoins de vos utilisateurs.</p>
+      </article>
+      <article class="skill-card">
+        <img src="/icons/security.svg" alt="Icône représentant un bouclier" aria-label="Sécurité" loading="lazy"/>
+        <h3>Sites Sécurisés</h3>
+        <p>Protection de vos données et de celles de vos utilisateurs grâce aux meilleures pratiques en matière de sécurité web.</p>
+      </article>
+    </div>
+    <div class="cta-container">
+      <a href="/services" class="cta-button">Découvrez tous mes services</a>
+    </div>
+  </section>
+  
   
 </BaseLayout>
 
