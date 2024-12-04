@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import '../assets/css/hero.css';
 import '../assets/css/about.css';
 import '../assets/css/skill.css';
+import '../assets/css/portfolio.css';
 ---
 
 <BaseLayout title="Accueil | Mon Site Perso">
@@ -75,6 +76,33 @@ import '../assets/css/skill.css';
     </div>
   </section>
   
+  <section class="portfolio" id="portfolio">
+    <h2>Mes Projets</h2>
+    <div class="portfolio-container">
+      <article class="project-card">
+        <img src="/mockups/travaux_sisters.png" alt="Mockup du site Travaux Sisters" loading="lazy" width="400" height="400" />
+        <h3>Travaux Sisters</h3>
+        <p>
+          Un site moderne et interactif conçu pour une entrepreneuse passionnée, dédiée à accompagner les femmes dans l'apprentissage et la réalisation de travaux personnels. Un projet axé sur l'autonomie et l'empowerment.
+        </p>
+        <div class="project-links">
+          <a href="https://travauxsisters.netlify.app" target="_blank" rel="noopener noreferrer">Voir le site</a>
+        </div>
+      </article>
+  
+      <article class="project-card">
+        <div class="badge">En cours</div>
+        <img src="/mockups/bhb_conseil.png" alt="Mockup du site BHB Conseil" loading="lazy" width="400" height="400" />
+        <h3>BHB Conseil</h3>
+        <p>
+          Un site vitrine professionnel en cours de création pour un cabinet de conseil en gestion de patrimoine et en investissement financier. Conçu pour refléter l’expertise des trois associés et établir une confiance auprès de leurs clients.
+        </p>
+        <div class="project-links">
+          <a href="https://bhbconseil.netlify.app" target="_blank" rel="noopener noreferrer">Voir le site</a>
+        </div>
+      </article>
+    </div>
+  </section>
   
 </BaseLayout>
 
