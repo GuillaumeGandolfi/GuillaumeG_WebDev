@@ -1,0 +1,102 @@
+/* Section globale */
+.timeline-section {
+  padding: 5rem 2rem; /* Espacement général */
+  text-align: center;
+  color: var(--text);
+}
+
+.timeline-section h2 {
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  color: var(--title);
+  margin-bottom: 4rem; /* Espace sous le titre */
+}
+
+/* Timeline principale */
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
+  gap: 2rem; /* Espacement entre les cartes */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Timeline item */
+.timeline-item {
+  position: relative;
+  text-align: center;
+  padding: 1rem;
+}
+
+.timeline-dot {
+  margin: 0 auto 1rem auto; /* Centre les icônes */
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent; /* Pas de fond */
+}
+
+.timeline-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Maintient les proportions */
+}
+
+.timeline-content {
+  padding: 0.5rem;
+  background-color: transparent; /* Pas de fond */
+  border-radius: 0;
+  box-shadow: none; /* Retire les ombres */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0; /* Caché par défaut */
+  transform: translateY(20px); /* Décalage initial */
+}
+
+.timeline-content h3 {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Animation d'apparition */
+.timeline-item.visible .timeline-content {
+  opacity: 1;
+  transform: translateY(0); /* Rentre en place */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .timeline {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur tablette */
+    gap: 1.5rem; /* Réduit l'espace entre les cartes */
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    gap: 2rem; /* Espacement vertical pour mobile */
+  }
+
+  .timeline-item {
+    padding: 0;
+  }
+
+  .timeline-dot {
+    margin-bottom: 1rem;
+  }
+
+  .timeline-content {
+    text-align: center; /* Centre le texte */
+    transform: translateY(20px); /* Animation cohérente */
+  }
+}
