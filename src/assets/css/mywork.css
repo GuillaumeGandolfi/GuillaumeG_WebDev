@@ -1,6 +1,5 @@
-/* Section globale */
 .timeline-section {
-  padding: 5rem 2rem; /* Espacement général */
+  padding: 5rem 2rem;
   text-align: center;
   color: var(--text);
 }
@@ -9,19 +8,17 @@
   font-family: var(--font-title);
   font-size: 2.5rem;
   color: var(--title);
-  margin-bottom: 4rem; /* Espace sous le titre */
+  margin-bottom: 4rem;
 }
 
-/* Timeline principale */
 .timeline {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
-  gap: 2rem; /* Espacement entre les cartes */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Timeline item */
 .timeline-item {
   position: relative;
   text-align: center;
@@ -29,29 +26,29 @@
 }
 
 .timeline-dot {
-  margin: 0 auto 1rem auto; /* Centre les icônes */
+  margin: 0 auto 1rem auto;
   width: 48px;
   height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent; /* Pas de fond */
+  background-color: transparent;
 }
 
 .timeline-icon {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Maintient les proportions */
+  object-fit: contain;
 }
 
 .timeline-content {
   padding: 0.5rem;
-  background-color: transparent; /* Pas de fond */
+  background-color: transparent;
   border-radius: 0;
-  box-shadow: none; /* Retire les ombres */
+  box-shadow: none;
   transition: transform 0.3s ease, opacity 0.3s ease;
-  opacity: 0; /* Caché par défaut */
-  transform: translateY(20px); /* Décalage initial */
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 .timeline-content h3 {
@@ -67,24 +64,22 @@
   line-height: 1.6;
 }
 
-/* Animation d'apparition */
 .timeline-item.visible .timeline-content {
   opacity: 1;
-  transform: translateY(0); /* Rentre en place */
+  transform: translateY(0);
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
   .timeline {
-    grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur tablette */
-    gap: 1.5rem; /* Réduit l'espace entre les cartes */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
   .timeline {
-    grid-template-columns: 1fr; /* Une seule colonne sur mobile */
-    gap: 2rem; /* Espacement vertical pour mobile */
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .timeline-item {
@@ -96,7 +91,7 @@
   }
 
   .timeline-content {
-    text-align: center; /* Centre le texte */
-    transform: translateY(20px); /* Animation cohérente */
+    text-align: center;
+    transform: translateY(20px);
   }
 }
