@@ -33,13 +33,13 @@
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 1rem;
-  color: var(--text); /* Texte par défaut */
+  color: var(--text);
   text-decoration: none;
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .header-nav a:hover {
-  color: var(--accent); /* Vert néon au survol */
+  color: var(--accent);
   transform: scale(1.1);
 }
 

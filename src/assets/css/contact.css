@@ -1,26 +1,22 @@
-/* Section Contact */
 .contact-section {
-  padding: 5rem 2rem; /* Espacement global */
-  text-align: center; /* Centre le contenu */
-  color: var(--text); /* Couleur du texte */
+  padding: 5rem 2rem;
+  text-align: center;
+  color: var(--text);
 }
 
-/* Conteneur principal */
 .contact-content {
-  max-width: 800px; /* Largeur maximale pour éviter que le texte soit trop large */
-  margin: 0 auto; /* Centre le contenu horizontalement */
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-/* Titre principal */
 .contact-section h2 {
   font-family: var(--font-title);
   font-size: 2.5rem;
-  color: var(--accent); /* Couleur dynamique pour attirer l'attention */
+  color: var(--accent);
   margin-bottom: 1rem;
   line-height: 1.2;
 }
 
-/* Texte descriptif */
 .contact-description {
   font-family: var(--font-body);
   font-size: 1.2rem;
@@ -29,7 +25,6 @@
   color: var(--text);
 }
 
-/* Bouton CTA */
 .btn-primary {
   display: inline-block;
   padding: 0.8rem 1.5rem;
@@ -44,12 +39,11 @@
 }
 
 .btn-primary:hover {
-  background-color: var(--title); /* Changement de couleur au survol */
-  transform: scale(1.05); /* Légère animation */
+  background-color: var(--title);
+  transform: scale(1.05);
   color: var(--primary);
 }
 
-/* Informations de contact */
 .contact-info {
   margin-top: 2rem;
   font-family: var(--font-body);
@@ -69,24 +63,23 @@
   text-decoration: underline;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .contact-section h2 {
-    font-size: 2rem; /* Taille de titre réduite sur mobile */
+    font-size: 2rem;
   }
 
   .contact-description {
-    font-size: 1.1rem; /* Texte plus compact */
+    font-size: 1.1rem;
   }
 
   .btn-primary {
-    padding: 0.6rem 1.2rem; /* Bouton légèrement plus petit */
+    padding: 0.6rem 1.2rem;
   }
 }
 
 @media (max-width: 480px) {
   .contact-section {
-    padding: 3rem 1rem; /* Réduction des marges sur les tout petits écrans */
+    padding: 3rem 1rem;
   }
 
   .contact-section h2 {
