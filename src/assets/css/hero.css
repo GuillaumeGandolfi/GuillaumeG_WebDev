@@ -11,7 +11,7 @@
   color: var(--text);
   overflow: visible;
   z-index: 1;
-  padding-top: 8rem;
+  padding-top: 6rem;
 }
 
 .hero::before {
@@ -87,12 +87,15 @@
   background-color: var(--accent);
   border-radius: 8px;
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 4px 10px rgba(0, 255, 127, 0.3); /* Ombre subtile */
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .hero-cta:hover {
   background-color: var(--title);
   transform: scale(1.1);
+  box-shadow: 0px 6px 14px rgba(0, 255, 127, 0.5);
 }
 
 @media (prefers-reduced-motion: reduce) {
