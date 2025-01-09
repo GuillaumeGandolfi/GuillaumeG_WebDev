@@ -9,13 +9,13 @@
   font-family: var(--font-title);
   font-size: 2.5rem;
   color: var(--accent);
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .skills-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
+  gap: 4rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -91,7 +91,7 @@
 
   .skills-container {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 2rem;
   }
 
   .skills h2 {
@@ -108,5 +108,10 @@
 
   .skill-card p {
     font-size: 0.9rem;
+  }
+
+  .skill-card img {
+    width: 40px;
+    height: 40px;
   }
 }

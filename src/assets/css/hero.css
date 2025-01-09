@@ -17,10 +17,10 @@
 .hero::before {
   content: "";
   position: absolute;
-  width: 550px;
-  height: 550px;
+  width: 500px;
+  height: 500px;
   background: radial-gradient(circle, rgba(0, 255, 127, 0.25), transparent 70%);
-  filter: blur(100px);
+  filter: blur(80px);
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -94,8 +94,8 @@
 
 .hero-cta:hover {
   background-color: var(--title);
-  transform: scale(1.1);
-  box-shadow: 0px 6px 14px rgba(0, 255, 255, 0.5);
+  transform: scale(1.08);
+  box-shadow: 0px 6px 14px rgba(0, 255, 255, 0.4);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -107,6 +107,7 @@
 @media (max-width: 1024px) {
   .hero {
     min-height: 0;
+    padding-top: 8rem;
   }
 
   .hero-container {
@@ -135,6 +136,7 @@
 @media (max-width: 768px) {
   .hero {
     min-height: 0;
+    padding-top: 8rem;
   }
 
   .hero-container {
@@ -185,5 +187,15 @@
   .hero::before {
     width: 250px;
     height: 250px;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero-title {
+    font-size: 1.6rem;
+  }
+  .hero-cta {
+    font-size: 0.6rem;
+    padding: 0.4rem 0.6rem;
   }
 }

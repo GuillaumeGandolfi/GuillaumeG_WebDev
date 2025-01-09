@@ -46,9 +46,8 @@
   background-color: transparent;
   border-radius: 0;
   box-shadow: none;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  opacity: 0;
-  transform: translateY(20px);
+  opacity: 1; /* Toujours visible */
+  transform: none; /* Pas de décalage */
 }
 
 .timeline-content h3 {
@@ -64,11 +63,7 @@
   line-height: 1.6;
 }
 
-.timeline-item.visible .timeline-content {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+/* Responsive Design */
 @media (max-width: 1024px) {
   .timeline {
     grid-template-columns: repeat(2, 1fr);
@@ -92,6 +87,5 @@
 
   .timeline-content {
     text-align: center;
-    transform: translateY(20px);
   }
 }

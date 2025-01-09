@@ -10,177 +10,334 @@ import '../assets/css/contact.css';
 ---
 
 <BaseLayout title="Accueil | Mon Site Perso">
-  <section class="hero">
+  <section class="hero" aria-labelledby="hero-title">
     <div class="hero-container">
-      <h1 class="hero-title">
-        Je réalise des sites web <span class="highlight">performants</span> et <span class="highlight">optimisés</span>,
+      <h1 id="hero-title" class="hero-title">
+        Je réalise des sites web <span class="highlight">performants</span> et 
+        <span class="highlight">optimisés</span>,
         <br />
         pour transformer vos idées en une <span class="highlight">vitrine </span>professionnelle
         qui <span class="highlight">booste</span> votre visibilité.
       </h1>
-      
-      <a href="#contact" class="hero-cta" aria-label="Commencez votre projet avec moi">
+      <a href="#contact" class="hero-cta" aria-label="Commencez votre projet avec moi" 
+      title="Démarrez votre projet avec un site performant et optimisé">
         Démarrez votre projet
       </a>
     </div>
-    <div class="hero-background"></div>
+    <div class="hero-background" aria-hidden="true"></div>
   </section>
   
+  
 
-  <section class="about-me" id="about">
+  <section class="about-me" id="about" aria-labelledby="about-title">
     <div class="about-container">
-      <h2>À Propos de Moi</h2>
+      <h2 id="about-title">À Propos de Moi</h2>
       <p>
-        Bonjour, je m'appelle Guillaume, et je suis passionné par le développement web. Mon objectif est simple : concevoir des sites modernes, performants et adaptés à vos besoins.
+        Bonjour, je m'appelle <strong>Guillaume</strong>, et je suis passionné par le <strong>développement web</strong>.
+        Mon objectif est simple : concevoir des sites <strong>modernes</strong>, <strong>performants</strong> et <strong>adaptés</strong> à vos besoins.
       </p>
       <p>
-        Avec une solide expertise en HTML, CSS, JavaScript et React, je mets en œuvre des solutions web rapides et optimisées pour offrir une expérience utilisateur fluide.
+        Avec une solide expertise en <em>HTML</em>, <em>CSS</em>, <em>JavaScript</em> et <em>React</em>,
+        je mets en œuvre des solutions web <strong>rapides</strong> et <strong>optimisées</strong> pour offrir une expérience utilisateur fluide.
       </p>
       <p>
-        Ce qui me distingue ? Une approche collaborative et une attention aux détails, afin que chaque projet reflète parfaitement votre vision. Ensemble, donnons vie à vos idées et transformons-les en une présence en ligne qui fait la différence.
+        Ce qui me distingue ? Une approche <strong>collaborative</strong> et une attention aux détails, afin que chaque projet reflète
+        parfaitement votre <strong>vision</strong>. Ensemble, donnons vie à vos idées et transformons-les en une présence en ligne qui fait la différence.
       </p>
     </div>
   </section>
   
+  
 
-  <section class="skills" id="skills">
-    <h2>Mes compétences à votre service</h2>
+  <section class="skills" id="skills" aria-labelledby="skills-title">
+    <h2 id="skills-title">Mes compétences à votre service</h2>
     <div class="skills-container">
-      <article class="skill-card">
-        <img src="/icons/performant.svg" alt="Icône représentant la performance" aria-label="Performance" loading="lazy"/>
-        <h3>Sites Performants</h3>
-        <p>Créés avec Astro, mes sites chargent rapidement et offrent une excellente expérience utilisateur.</p>
+      <article class="skill-card" aria-labelledby="skill-performance">
+        <img
+          src="/icons/performant.svg"
+          alt="Icône représentant la performance"
+          loading="lazy"
+        />
+        <h3 id="skill-performance">Sites Performants</h3>
+        <p>
+          Créés avec Astro, mes sites chargent rapidement et offrent une excellente
+          expérience utilisateur.
+        </p>
       </article>
-      <article class="skill-card">
-        <img src="/icons/accessibility.svg" alt="Icône représentant l'accessibilité" aria-label="Accessibilité" loading="lazy"/>
-        <h3>Accessibilité</h3>
-        <p>Des sites inclusifs, accessibles à tous, respectant les meilleures pratiques d'accessibilité.</p>
+      <article class="skill-card" aria-labelledby="skill-accessibility">
+        <img
+          src="/icons/accessibility.svg"
+          alt="Icône représentant l'accessibilité"
+          loading="lazy"
+        />
+        <h3 id="skill-accessibility">Accessibilité</h3>
+        <p>
+          Des sites inclusifs, accessibles à tous, respectant les meilleures pratiques
+          d'accessibilité.
+        </p>
       </article>
-      <article class="skill-card">
-        <img src="/icons/responsive.svg" alt="Icône représentant un smartphone" aria-label="Mobile Friendly" loading="lazy"/>
-        <h3>Mobile Friendly</h3>
-        <p>Un design adaptatif qui fonctionne parfaitement sur tous les appareils, des téléphones aux écrans larges.</p>
+      <article class="skill-card" aria-labelledby="skill-mobile-friendly">
+        <img
+          src="/icons/responsive.svg"
+          alt="Icône représentant un smartphone"
+          loading="lazy"
+        />
+        <h3 id="skill-mobile-friendly">Mobile Friendly</h3>
+        <p>
+          Un design adaptatif qui fonctionne parfaitement sur tous les appareils, des
+          téléphones aux écrans larges.
+        </p>
       </article>
-      <article class="skill-card">
-        <img src="/icons/seo.svg" alt="Icône représentant une loupe" aria-label="SEO Optimisé" loading="lazy"/>
-        <h3>SEO Optimisé</h3>
-        <p>Des sites bien référencés, grâce à une structure propre et des optimisations adaptées.</p>
+      <article class="skill-card" aria-labelledby="skill-seo">
+        <img
+          src="/icons/seo.svg"
+          alt="Icône représentant une loupe"
+          loading="lazy"
+        />
+        <h3 id="skill-seo">SEO Optimisé</h3>
+        <p>
+          Des sites bien référencés, grâce à une structure propre et des optimisations
+          adaptées.
+        </p>
       </article>
-      <article class="skill-card">
-        <img src="/icons/design.svg" alt="Icône représentant le design moderne" aria-label="Design Moderne" loading="lazy"/>
-        <h3>Design Moderne</h3>
-        <p>Création d’interfaces esthétiques et intuitives, adaptées aux besoins de vos utilisateurs.</p>
+      <article class="skill-card" aria-labelledby="skill-design">
+        <img
+          src="/icons/design.svg"
+          alt="Icône représentant le design moderne"
+          loading="lazy"
+        />
+        <h3 id="skill-design">Design Moderne</h3>
+        <p>
+          Création d’interfaces esthétiques et intuitives, adaptées aux besoins de vos
+          utilisateurs.
+        </p>
       </article>
-      <article class="skill-card">
-        <img src="/icons/security.svg" alt="Icône représentant un bouclier" aria-label="Sécurité" loading="lazy"/>
-        <h3>Sites Sécurisés</h3>
-        <p>Protection de vos données et de celles de vos utilisateurs grâce aux meilleures pratiques en matière de sécurité web.</p>
+      <article class="skill-card" aria-labelledby="skill-security">
+        <img
+          src="/icons/security.svg"
+          alt="Icône représentant un bouclier"
+          loading="lazy"
+        />
+        <h3 id="skill-security">Sites Sécurisés</h3>
+        <p>
+          Protection de vos données et de celles de vos utilisateurs grâce aux meilleures
+          pratiques en matière de sécurité web.
+        </p>
       </article>
     </div>
   </section>
   
-  <section class="portfolio" id="portfolio">
-    <h2>Découvrez mes dernières réalisations</h2>
+  <section class="portfolio" id="portfolio" aria-labelledby="portfolio-title">
+    <h2 id="portfolio-title">Découvrez mes dernières réalisations</h2>
     <div class="portfolio-container">
-      <article class="project-card">
-        <img src="/mockups/travaux_sisters.png" alt="Mockup du site Travaux Sisters" loading="lazy" width="400" height="400" />
-        <h3>Travaux Sisters</h3>
-        <p>
-          Un site moderne et interactif conçu pour une entrepreneuse passionnée, dédiée à accompagner les femmes dans l'apprentissage et la réalisation de travaux personnels. Un projet axé sur l'autonomie et l'empowerment.
+      <article class="project-card" aria-labelledby="project-travaux-title" aria-describedby="project-travaux-description">
+        <img 
+          src="/mockups/travaux_sisters.png" 
+          alt="Mockup du site Travaux Sisters, une plateforme moderne et interactive dédiée à l'empowerment des femmes" 
+          loading="lazy" 
+          width="400" 
+          height="400" 
+        />
+        <h3 id="project-travaux-title">Travaux Sisters</h3>
+        <p id="project-travaux-description">
+          Un site moderne et interactif conçu pour une entrepreneuse passionnée, dédiée à accompagner les femmes dans 
+          l'apprentissage et la réalisation de travaux personnels. Un projet axé sur l'autonomie et l'empowerment.
         </p>
         <div class="project-links">
-          <a href="https://travauxsisters.netlify.app" target="_blank" rel="noopener noreferrer">Voir le site</a>
+          <a 
+            href="https://travauxsisters.netlify.app" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            aria-label="Voir le site Travaux Sisters, une plateforme moderne pour l'empowerment des femmes"
+          >
+            Voir le site
+          </a>
         </div>
       </article>
   
-      <article class="project-card">
-        <div class="badge">En cours</div>
-        <img src="/mockups/bhb_conseil.png" alt="Mockup du site BHB Conseil" loading="lazy" width="400" height="400" />
-        <h3>BHB Conseil</h3>
-        <p>
-          Un site vitrine professionnel en cours de création pour un cabinet de conseil en gestion de patrimoine et en investissement financier. Conçu pour refléter l’expertise des trois associés et établir une confiance auprès de leurs clients.
+      <article class="project-card" aria-labelledby="project-bhb-title" aria-describedby="project-bhb-description">
+        <div class="badge" aria-hidden="true">En cours</div>
+        <img 
+          src="/mockups/bhb_conseil.png" 
+          alt="Mockup du site BHB Conseil, un site vitrine professionnel pour un cabinet de conseil en gestion de patrimoine" 
+          loading="lazy" 
+          width="400" 
+          height="400" 
+        />
+        <h3 id="project-bhb-title">BHB Conseil</h3>
+        <p id="project-bhb-description">
+          Un site vitrine professionnel en cours de création pour un cabinet de conseil en gestion de patrimoine et 
+          en investissement financier. Conçu pour refléter l’expertise des trois associés et établir une confiance auprès 
+          de leurs clients.
         </p>
         <div class="project-links">
-          <a href="https://bhbconseil.netlify.app" target="_blank" rel="noopener noreferrer">Voir le site</a>
+          <a 
+            href="https://bhbconseil.netlify.app" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            aria-label="Voir le site BHB Conseil, un site vitrine en cours de création pour un cabinet de conseil"
+          >
+            Voir le site
+          </a>
         </div>
       </article>
     </div>
   </section>
+  
 
-  <section class="timeline-section" id="how-i-work">
-    <h2>Ma méthode de travail</h2>
+  <section class="timeline-section" id="how-i-work" aria-labelledby="timeline-title">
+    <h2 id="timeline-title">Ma méthode de travail</h2>
     <div class="timeline">
       <!-- Étape 1 -->
-      <div class="timeline-item">
+      <article 
+        class="timeline-item" 
+        aria-labelledby="step-analyse-title" 
+        aria-describedby="step-analyse-description"
+      >
         <div class="timeline-dot">
-          <img src="/icons/analyse.png" alt="Icône Analyse" class="timeline-icon" loading="lazy" />
+          <img 
+            src="/icons/analyse.png" 
+            alt="Analyse des besoins et objectifs du client" 
+            class="timeline-icon" 
+            loading="lazy" 
+          />
         </div>
         <div class="timeline-content">
-          <h3>1. Analyse</h3>
-          <p>Je commence par une réunion ou une discussion pour comprendre vos besoins, vos objectifs et votre vision.</p>
+          <h3 id="step-analyse-title">1. Analyse</h3>
+          <p id="step-analyse-description">
+            Je commence par une réunion ou une discussion pour comprendre vos besoins, vos objectifs et votre vision.
+          </p>
         </div>
-      </div>
+      </article>
   
       <!-- Étape 2 -->
-      <div class="timeline-item">
+      <article 
+        class="timeline-item" 
+        aria-labelledby="step-conception-title" 
+        aria-describedby="step-conception-description"
+      >
         <div class="timeline-dot">
-          <img src="/icons/design.png" alt="Icône Conception" class="timeline-icon" loading="lazy" />
+          <img 
+            src="/icons/design.png" 
+            alt="Création de maquettes et prototypes" 
+            class="timeline-icon" 
+            loading="lazy" 
+          />
         </div>
         <div class="timeline-content">
-          <h3>2. Conception</h3>
-          <p>Je crée une maquette ou un prototype pour définir la structure et le design de votre projet.</p>
+          <h3 id="step-conception-title">2. Conception</h3>
+          <p id="step-conception-description">
+            Je crée une maquette ou un prototype pour définir la structure et le design de votre projet.
+          </p>
         </div>
-      </div>
+      </article>
   
       <!-- Étape 3 -->
-      <div class="timeline-item">
+      <article 
+        class="timeline-item" 
+        aria-labelledby="step-development-title" 
+        aria-describedby="step-development-description"
+      >
         <div class="timeline-dot">
-          <img src="/icons/development.png" alt="Icône Développement" class="timeline-icon" loading="lazy" />
+          <img 
+            src="/icons/development.png" 
+            alt="Développement du site web" 
+            class="timeline-icon" 
+            loading="lazy" 
+          />
         </div>
         <div class="timeline-content">
-          <h3>3. Développement</h3>
-          <p>J’écris du code propre et optimisé pour transformer le design en un site web rapide et fonctionnel.</p>
+          <h3 id="step-development-title">3. Développement</h3>
+          <p id="step-development-description">
+            J’écris du code propre et optimisé pour transformer le design en un site web rapide et fonctionnel.
+          </p>
         </div>
-      </div>
+      </article>
   
       <!-- Étape 4 -->
-      <div class="timeline-item">
+      <article 
+        class="timeline-item" 
+        aria-labelledby="step-test-title" 
+        aria-describedby="step-test-description"
+      >
         <div class="timeline-dot">
-          <img src="/icons/test-delivery.png" alt="Icône Test & Livraison" class="timeline-icon" loading="lazy" />
+          <img 
+            src="/icons/test-delivery.png" 
+            alt="Tests minutieux et livraison du projet" 
+            class="timeline-icon" 
+            loading="lazy" 
+          />
         </div>
         <div class="timeline-content">
-          <h3>4. Test & Livraison</h3>
-          <p>Je teste minutieusement le projet avant de le mettre en ligne et m’assure qu’il fonctionne parfaitement.</p>
+          <h3 id="step-test-title">4. Test & Livraison</h3>
+          <p id="step-test-description">
+            Je teste minutieusement le projet avant de le mettre en ligne et m’assure qu’il fonctionne parfaitement.
+          </p>
         </div>
-      </div>
+      </article>
     </div>
   </section>
   
-  <section class="contact-section" aria-labelledby="contact-title">
+  
+  <section class="contact-section" id="contact" aria-labelledby="contact-title">
     <div class="contact-content">
-      <h2 id="contact-title">
-        Ensemble, construisons un site moderne et performant
-      </h2>
+      <h2 id="contact-title">Ensemble, construisons un site moderne et performant</h2>
       <p class="contact-description">
         Parlons de votre projet et donnons-lui vie avec une solution rapide, accessible et à votre image.
       </p>
   
-      <!-- Netlify Forms -->
-      <form class="contact-form" name="contact" method="POST" data-netlify="true">
+      <!-- Formulaire de contact -->
+      <form class="contact-form" name="contact" method="POST" data-netlify="true" aria-labelledby="contact-title">
+        <!-- Champ caché pour Netlify -->
         <input type="hidden" name="form-name" value="contact">
+  
+        <!-- Champ Nom -->
         <div class="form-group">
-          <label for="name">Nom</label>
-          <input type="text" id="name" name="name" placeholder="Votre nom" required>
+          <label for="name">Nom <span class="required">*</span></label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            placeholder="Votre nom" 
+            required 
+            aria-required="true" 
+            aria-describedby="name-help" 
+          />
+          <span id="name-help" class="sr-only">Votre nom complet</span>
         </div>
+  
+        <!-- Champ Email -->
         <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Votre email" required>
+          <label for="email">Email <span class="required">*</span></label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="Votre email" 
+            required 
+            aria-required="true" 
+            aria-describedby="email-help" 
+          />
+          <span id="email-help" class="sr-only">Votre adresse email</span>
         </div>
+  
+        <!-- Champ Message -->
         <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+          <label for="message">Message <span class="required">*</span></label>
+          <textarea 
+            id="message" 
+            name="message" 
+            rows="5" 
+            placeholder="Votre message" 
+            required 
+            aria-required="true" 
+            aria-describedby="message-help" 
+          ></textarea>
+          <span id="message-help" class="sr-only">Votre message détaillé</span>
         </div>
-        <button type="submit" class="btn-primary">Envoyer</button>
+  
+        <!-- Bouton d'envoi -->
+        <button type="submit" class="btn-primary" aria-label="Envoyer votre message">Envoyer</button>
       </form>
   
       <!-- Informations supplémentaires -->
@@ -192,6 +349,7 @@ import '../assets/css/contact.css';
       </div>
     </div>
   </section>
+  
   
 </BaseLayout>
 
