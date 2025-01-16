@@ -4,7 +4,7 @@ import '../assets/css/header.css';
 <header class="header">
   <div class="header-container">
     <!-- Logo temporaire -->
-    <span class="header-logo">Mon Logo</span>
+    <a href="#" class="header-logo" aria-label="Revenir en haut de page">Mon Logo</a>
 
     <!-- Bouton menu toggle -->
     <button class="menu-toggle" aria-label="Ouvrir le menu">
@@ -15,8 +15,9 @@ import '../assets/css/header.css';
 
     <nav class="header-nav" aria-label="Navigation principale">
       <a href="#about" title="En savoir plus sur moi">À propos</a>
-      <a href="#projects" title="Voir mes projets">Projets</a>
-      <a href="#services" title="Consulter les services proposés">Services</a>
+      <a href="#skills" title="Découvrir mes compétences">Compétences</a>
+      <a href="#portfolio" title="Voir mes projets">Projets</a>
+      <a href="#how-i-work" title="Comprendre ma méthode de travail">Méthode</a>
       <a href="#contact" title="Me contacter">Contact</a>
     </nav>
   </div>
@@ -28,15 +29,21 @@ import '../assets/css/header.css';
     const menuToggle = document.querySelector('.menu-toggle');
     const headerNav = document.querySelector('.header-nav');
 
+    // Toggle du menu mobile
     if (menuToggle && headerNav) {
       menuToggle.addEventListener('click', () => {
-        headerNav.classList.toggle('active');
+        if (headerNav.classList.contains('active')) {
+        headerNav.classList.remove('active');
+      } else {
+        headerNav.classList.add('active');
+      }
       });
     } else {
       console.error('Menu toggle or navigation not found');
     }
   }
 
+  // Effet de scroll pour le header
   if (typeof document !== 'undefined') {
     const header = document.querySelector('.header');
     const scrollThreshold = 100; // Distance de scroll avant l'effet
