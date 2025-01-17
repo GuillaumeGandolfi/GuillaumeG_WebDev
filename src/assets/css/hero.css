@@ -6,7 +6,7 @@
   text-align: center;
   min-height: 40vh;
   background-color: var(--primary);
-  background-image: url("/textures/black-linen.png");
+  background-image: url("/textures/black-linen.webp");
   background-repeat: repeat;
   color: var(--text);
   overflow: visible;
