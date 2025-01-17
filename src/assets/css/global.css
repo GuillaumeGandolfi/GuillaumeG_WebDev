@@ -79,8 +79,8 @@ body {
   font-family: var(--font-body);
   font-weight: 400;
   background-color: var(--primary);
-  background-image: url("/textures/black-linen.png");
-  background-repeat: repeat;
+  background-image: none;
   color: var(--text);
   line-height: 1.6;
+  transition: background-image 0.5s ease-in-out;
 }

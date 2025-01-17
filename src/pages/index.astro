@@ -345,69 +345,69 @@ import '../assets/css/contact.css';
 </BaseLayout>
 
 <script>
-// @ts-nocheck
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('[data-words]').forEach((animatedText) => {
-    const words = JSON.parse(animatedText.getAttribute('data-words'));
-    let wordIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-
-    function typeEffect() {
-      const currentWord = words[wordIndex];
-
-      if (charIndex === 0 && !isDeleting) {
-        animatedText.style.visibility = "visible";
-        animatedText.style.opacity = "1";
-      }
-
-      if (!isDeleting) {
-        animatedText.textContent = currentWord.slice(0, ++charIndex);
-        if (charIndex === currentWord.length) {
-          isDeleting = true;
-          setTimeout(typeEffect, 1000);
-          return;
+  // @ts-nocheck
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-words]').forEach((animatedText) => {
+      const words = JSON.parse(animatedText.getAttribute('data-words'));
+      let wordIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+  
+      function typeEffect() {
+        const currentWord = words[wordIndex];
+  
+        if (charIndex === 0 && !isDeleting) {
+          animatedText.style.visibility = "visible";
+          animatedText.style.opacity = "1";
         }
-      } else {
-        animatedText.textContent = currentWord.slice(0, --charIndex);
-        if (charIndex === 0) {
-          isDeleting = false;
-          wordIndex = (wordIndex + 1) % words.length;
+  
+        if (!isDeleting) {
+          animatedText.textContent = currentWord.slice(0, ++charIndex);
+          if (charIndex === currentWord.length) {
+            isDeleting = true;
+            setTimeout(typeEffect, 1000);
+            return;
+          }
+        } else {
+          animatedText.textContent = currentWord.slice(0, --charIndex);
+          if (charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+          }
         }
+  
+        setTimeout(typeEffect, isDeleting ? 100 : 200);
       }
-
-      setTimeout(typeEffect, isDeleting ? 100 : 200);
-    }
-
-    animatedText.textContent = "";
-
-    setTimeout(() => {
-      typeEffect();
-    }, 500);
-  });
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  const paragraphs = document.querySelectorAll('.about-container p');
-
-  const revealOnScroll = () => {
-    const triggerPoint = window.innerHeight / 1.2;
-
-    paragraphs.forEach((p) => {
-      const top = p.getBoundingClientRect().top;
-
-      if (top < triggerPoint) {
-        p.classList.add('visible');
-      }
+  
+      animatedText.textContent = "";
+  
+      setTimeout(() => {
+        typeEffect();
+      }, 500);
     });
-  };
-
-  window.addEventListener('scroll', revealOnScroll);
-});
-
-document.addEventListener('DOMContentLoaded', () => {
+  });
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    const paragraphs = document.querySelectorAll('.about-container p');
+  
+    const revealOnScroll = () => {
+      const triggerPoint = window.innerHeight / 1.2;
+  
+      paragraphs.forEach((p) => {
+        const top = p.getBoundingClientRect().top;
+  
+        if (top < triggerPoint) {
+          p.classList.add('visible');
+        }
+      });
+    };
+  
+    window.addEventListener('scroll', revealOnScroll);
+  });
+  
+  document.addEventListener('DOMContentLoaded', () => {
     const items = document.querySelectorAll('.timeline-item');
-
+  
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -418,9 +418,16 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       { threshold: 0.2 }
     );
-
+  
     items.forEach((item) => observer.observe(item));
   });
-
-
-</script>
+  
+  // 🔥 Ajout du script pour charger dynamiquement le background après LCP
+  document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(() => {
+      document.body.style.backgroundImage = "url('/textures/black-linen.webp')";
+    }, 100); // Délai de 100ms pour prioriser le contenu avant l'image
+  });
+  
+  </script>
+  
