@@ -15,7 +15,6 @@
     url("../fonts/Inter18pt-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
@@ -24,7 +23,6 @@
     url("../fonts/Inter18pt-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
@@ -33,7 +31,6 @@
     url("../fonts/Inter18pt-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
@@ -42,7 +39,6 @@
     url("../fonts/Inter18pt-ExtraBold.woff") format("woff");
   font-weight: 800;
   font-style: normal;
-  font-display: swap;
 }
 
 /* === Rajdhani === */
@@ -52,7 +48,6 @@
     url("../fonts/Rajdhani-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
@@ -61,7 +56,6 @@
     url("../fonts/Rajdhani-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
@@ -70,7 +64,6 @@
     url("../fonts/Rajdhani-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
@@ -79,7 +72,6 @@
     url("../fonts/Rajdhani-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
-  font-display: swap;
 }
 
 body {
