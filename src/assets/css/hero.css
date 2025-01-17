@@ -87,7 +87,7 @@
   background-color: var(--accent);
   border-radius: 8px;
   text-decoration: none;
-  box-shadow: 0px 4px 10px rgba(0, 255, 127, 0.3); /* Ombre subtile */
+  box-shadow: 0px 4px 10px rgba(0, 255, 127, 0.3);
   transition: background-color 0.3s ease, transform 0.3s ease,
     box-shadow 0.3s ease;
 }

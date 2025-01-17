@@ -188,7 +188,7 @@ import '../assets/css/contact.css';
   <section class="timeline-section" id="how-i-work" aria-labelledby="timeline-title">
     <h2 id="timeline-title">Ma méthode de travail</h2>
     <div class="timeline">
-      <!-- Étape 1 -->
+      
       <article 
         class="timeline-item" 
         aria-labelledby="step-analyse-title" 
@@ -209,8 +209,7 @@ import '../assets/css/contact.css';
           </p>
         </div>
       </article>
-  
-      <!-- Étape 2 -->
+
       <article 
         class="timeline-item" 
         aria-labelledby="step-conception-title" 
@@ -231,8 +230,7 @@ import '../assets/css/contact.css';
           </p>
         </div>
       </article>
-  
-      <!-- Étape 3 -->
+
       <article 
         class="timeline-item" 
         aria-labelledby="step-development-title" 
@@ -253,8 +251,7 @@ import '../assets/css/contact.css';
           </p>
         </div>
       </article>
-  
-      <!-- Étape 4 -->
+
       <article 
         class="timeline-item" 
         aria-labelledby="step-test-title" 
@@ -290,8 +287,7 @@ import '../assets/css/contact.css';
       <form class="contact-form" name="contact" method="POST" data-netlify="true" aria-labelledby="contact-title">
         <!-- Champ caché pour Netlify -->
         <input type="hidden" name="form-name" value="contact">
-  
-        <!-- Champ Nom -->
+
         <div class="form-group">
           <label for="name">Nom <span class="required">*</span></label>
           <input 
@@ -305,8 +301,7 @@ import '../assets/css/contact.css';
           />
           <span id="name-help" class="sr-only">Votre nom complet</span>
         </div>
-  
-        <!-- Champ Email -->
+
         <div class="form-group">
           <label for="email">Email <span class="required">*</span></label>
           <input 
@@ -321,7 +316,6 @@ import '../assets/css/contact.css';
           <span id="email-help" class="sr-only">Votre adresse email</span>
         </div>
   
-        <!-- Champ Message -->
         <div class="form-group">
           <label for="message">Message <span class="required">*</span></label>
           <textarea 
@@ -336,20 +330,17 @@ import '../assets/css/contact.css';
           <span id="message-help" class="sr-only">Votre message détaillé</span>
         </div>
   
-        <!-- Bouton d'envoi -->
         <button type="submit" class="btn-primary" aria-label="Envoyer votre message">Envoyer</button>
       </form>
-  
-      <!-- Informations supplémentaires -->
+
       <div class="contact-info">
         <p>Vous pouvez aussi m’écrire directement :</p>
-        <a href="mailto:contact@votre-email.com" aria-label="Envoyer un e-mail à Guillaume">
-          contact@votre-email.com
+        <a href="mailto:gandolfi.guillaume@gmail.com" aria-label="Envoyer un e-mail à Guillaume">
+          gandolfi.guillaume@gmail.com
         </a>
       </div>
     </div>
   </section>
-  
   
 </BaseLayout>
 
@@ -425,7 +416,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
       },
-      { threshold: 0.2 } // Apparition quand 20% de l'élément est visible
+      { threshold: 0.2 }
     );
 
     items.forEach((item) => observer.observe(item));

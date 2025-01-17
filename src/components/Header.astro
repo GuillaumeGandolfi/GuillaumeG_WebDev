@@ -3,10 +3,8 @@ import '../assets/css/header.css';
 ---
 <header class="header">
   <div class="header-container">
-    <!-- Logo temporaire -->
     <a href="#" class="header-logo" aria-label="Revenir en haut de page">Mon Logo</a>
 
-    <!-- Bouton menu toggle -->
     <button class="menu-toggle" aria-label="Ouvrir le menu">
       <span class="burger-line"></span>
       <span class="burger-line"></span>
@@ -46,13 +44,13 @@ import '../assets/css/header.css';
   // Effet de scroll pour le header
   if (typeof document !== 'undefined') {
     const header = document.querySelector('.header');
-    const scrollThreshold = 100; // Distance de scroll avant l'effet
+    const scrollThreshold = 100;
 
     window.addEventListener('scroll', () => {
       if (window.scrollY > scrollThreshold) {
-        header.classList.add('scrolled'); // Ajoute l'effet (classe)
+        header.classList.add('scrolled');
       } else {
-        header.classList.remove('scrolled'); // Retire l'effet
+        header.classList.remove('scrolled');
       }
     });
   }

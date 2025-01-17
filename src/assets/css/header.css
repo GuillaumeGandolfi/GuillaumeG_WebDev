@@ -1,18 +1,13 @@
 .header {
   display: flex;
   justify-content: center;
-  /* -- Le header reste toujours en haut -- */
   position: fixed;
   top: 0;
-  /* Pour le centrage horizontal */
   left: 50%;
   transform: translateX(-50%);
-
   z-index: 1000;
   padding: 2rem 0;
   transition: all 0.3s ease;
-
-  /* Largeur contrôlée (centrée sur grand écran) */
   width: 95%;
   max-width: 1200px;
 }
@@ -29,13 +24,11 @@
   box-sizing: border-box;
 }
 
-/* Lorsqu'on scrolle > 100px (géré par JS), on change juste le style du container */
 .header.scrolled .header-container {
   background-color: rgba(0, 0, 0, 0.8);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Logo */
 .header-logo {
   font-family: var(--font-title);
   font-size: 1.2rem;
@@ -44,7 +37,6 @@
   margin: 0;
 }
 
-/* Navigation principale (desktop) */
 .header-nav {
   display: flex;
   gap: 3rem;
@@ -64,7 +56,6 @@
   transform: scale(1.1);
 }
 
-/* Le bouton burger est caché en desktop */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -85,23 +76,20 @@
 }
 
 @media (max-width: 768px) {
-  /* --- On écrase la position fixed pour mobile --- */
   .header {
-    position: static; /* ou relative si tu préfères */
+    position: static;
     top: auto;
     left: auto;
-    transform: none; /* plus besoin de centrer */
+    transform: none;
     width: 100%;
     max-width: 100%;
-    margin: 0; /* au besoin */
-    /* Le header défilera naturellement avec la page */
+    margin: 0;
   }
 
   .header-container {
     padding: 1rem 2rem;
   }
 
-  /* On passe la nav en mode dropdown : hidden par défaut */
   .header-nav {
     display: none;
     flex-direction: column;
@@ -123,12 +111,11 @@
     transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
   }
 
-  /* Quand on clique sur le burger, on ajoute .active : affichage menu */
   .header-nav.active {
     display: flex;
     opacity: 1;
     visibility: visible;
-    transform: translateY(10px); /* petit effet de glissement */
+    transform: translateY(10px);
   }
 
   .header-nav a {
@@ -149,7 +136,6 @@
     transform: scale(1.05);
   }
 
-  /* On affiche le bouton burger en mobile */
   .menu-toggle {
     display: flex;
   }
