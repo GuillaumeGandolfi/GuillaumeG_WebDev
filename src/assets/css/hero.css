@@ -52,8 +52,9 @@
 }
 
 .hero-title {
-  font-family: var(--font-title);
+  font-family: "Rajdhani", Arial, sans-serif;
   font-size: 3rem;
+  min-height: 120px;
   margin-bottom: 1rem;
 }
 
