@@ -57,7 +57,7 @@
 }
 
 .menu-toggle {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
@@ -65,14 +65,31 @@
   background: none;
   border: none;
   cursor: pointer;
+  position: relative;
+  z-index: 1100;
+  transition: transform 0.3s ease;
 }
 
+/* Lignes du burger */
 .menu-toggle .burger-line {
   height: 3px;
   width: 100%;
   background-color: var(--text);
   border-radius: 2px;
-  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* 🔥 Effet croix quand le menu est ouvert */
+.menu-toggle.active .burger-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active .burger-line:nth-child(2) {
+  opacity: 0; /* On cache la ligne du milieu */
+}
+
+.menu-toggle.active .burger-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 @media (max-width: 768px) {
@@ -99,10 +116,16 @@
     left: 0;
     right: 0;
 
-    background-color: var(--primary);
-    border-radius: 12px;
+    background-color: var(--primary); /* Fond de base */
+    background-image: url("/textures/black-linen.webp"); /* Applique la texture */
+    background-size: cover;
+    background-repeat: repeat;
+
+    border: 2px solid var(--text); /* Bordure blanche */
+    border-radius: 12px; /* Arrondi des coins */
     padding: 1rem 1.5rem;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Ombre subtile */
     z-index: 1000;
 
     opacity: 0;

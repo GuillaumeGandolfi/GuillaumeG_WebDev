@@ -27,14 +27,11 @@ import '../assets/css/header.css';
     const menuToggle = document.querySelector('.menu-toggle');
     const headerNav = document.querySelector('.header-nav');
 
-    // Toggle du menu mobile
+    // Toggle du menu mobile avec animation du burger
     if (menuToggle && headerNav) {
       menuToggle.addEventListener('click', () => {
-        if (headerNav.classList.contains('active')) {
-        headerNav.classList.remove('active');
-      } else {
-        headerNav.classList.add('active');
-      }
+        headerNav.classList.toggle('active');
+        menuToggle.classList.toggle('active'); // Active l'animation du burger
       });
     } else {
       console.error('Menu toggle or navigation not found');
