@@ -6,7 +6,7 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
-  padding: 2rem 0;
+  padding: 1rem 0;
   transition: all 0.3s ease;
   width: 95%;
   max-width: 1200px;
@@ -95,18 +95,17 @@
 }
 
 @media (max-width: 768px) {
+  body {
+    padding-top: 100px;
+  }
+
   .header {
-    position: static;
-    top: auto;
-    left: auto;
-    transform: none;
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
+    position: fixed;
   }
 
   .header-container {
-    padding: 1rem 2rem;
+    position: relative;
+    z-index: 1001;
   }
 
   .header-nav {
