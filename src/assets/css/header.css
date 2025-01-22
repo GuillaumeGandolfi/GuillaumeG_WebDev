@@ -29,12 +29,9 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.header-logo {
-  font-family: var(--font-title);
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--text);
-  margin: 0;
+.header-logo img {
+  display: block;
+  object-fit: contain;
 }
 
 .header-nav {
@@ -79,17 +76,22 @@
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* 🔥 Effet croix quand le menu est ouvert */
 .menu-toggle.active .burger-line:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
 
 .menu-toggle.active .burger-line:nth-child(2) {
-  opacity: 0; /* On cache la ligne du milieu */
+  opacity: 0;
 }
 
 .menu-toggle.active .burger-line:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -116,16 +118,16 @@
     left: 0;
     right: 0;
 
-    background-color: var(--primary); /* Fond de base */
-    background-image: url("/textures/black-linen.webp"); /* Applique la texture */
+    background-color: var(--primary);
+    background-image: url("/textures/black-linen.webp");
     background-size: cover;
     background-repeat: repeat;
 
-    border: 2px solid var(--text); /* Bordure blanche */
-    border-radius: 12px; /* Arrondi des coins */
+    border: 2px solid var(--text);
+    border-radius: 12px;
     padding: 1rem 1.5rem;
 
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Ombre subtile */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     z-index: 1000;
 
     opacity: 0;

@@ -1,6 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
+import { Image } from "astro:assets";
+import travauxSisters from "../assets/mockups/travaux_sisters.webp";
+import bhbConseil from "../assets/mockups/bhb_conseil.webp";
+
 import '../assets/css/hero.css';
 import '../assets/css/about.css';
 import '../assets/css/skill.css';
@@ -131,12 +135,13 @@ import '../assets/css/contact.css';
     <h2 id="portfolio-title">Découvrez mes dernières réalisations</h2>
     <div class="portfolio-container">
       <article class="project-card" aria-labelledby="project-travaux-title" aria-describedby="project-travaux-description">
-        <img 
-          src="/mockups/travaux_sisters.webp" 
-          alt="Mockup du site Travaux Sisters, une plateforme moderne et interactive dédiée à l'empowerment des femmes" 
-          loading="lazy" 
-          width="400" 
-          height="400" 
+        <Image
+          src={travauxSisters}
+          alt="Mockup du site Travaux Sisters, une plateforme moderne et interactive dédiée à l'empowerment des femmes."
+          width={400}
+          height={400}
+          format="webp"
+          loading="lazy"
         />
         <h3 id="project-travaux-title">Travaux Sisters</h3>
         <p id="project-travaux-description">
@@ -157,12 +162,13 @@ import '../assets/css/contact.css';
   
       <article class="project-card" aria-labelledby="project-bhb-title" aria-describedby="project-bhb-description">
         <div class="badge" aria-hidden="true">En cours</div>
-        <img 
-          src="/mockups/bhb_conseil.webp" 
-          alt="Mockup du site BHB Conseil, un site vitrine professionnel pour un cabinet de conseil en gestion de patrimoine" 
-          loading="lazy" 
-          width="400" 
-          height="400" 
+        <Image
+          src={bhbConseil}
+          alt="Mockup du site BHB Conseil, un site vitrine professionnel pour un cabinet de conseil en gestion de patrimoine."
+          width={400}
+          height={400}
+          format="webp"
+          loading="lazy"
         />
         <h3 id="project-bhb-title">BHB Conseil</h3>
         <p id="project-bhb-description">

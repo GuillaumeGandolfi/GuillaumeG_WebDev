@@ -1,10 +1,15 @@
 ---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo/logo.webp';
+
 import '../assets/css/header.css';
 ---
 <header class="header">
   <div class="header-container">
-    <a href="#" class="header-logo" aria-label="Revenir en haut de page">Mon Logo</a>
-
+    <a href="/" class="header-logo" aria-label="Revenir en haut de page">
+      <Image src={logo} width="70" height="60" alt="Logo du site" loading="eager" />
+    </a>
+    
     <button class="menu-toggle" aria-label="Ouvrir le menu">
       <span class="burger-line"></span>
       <span class="burger-line"></span>

@@ -19,8 +19,20 @@ const {
     <title>{title}</title>
     <meta name="description" content={description} />
 
-    <link rel="preload" href="/assets/fonts/Rajdhani-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-    <link rel="preload" href="/assets/fonts/Rajdhani-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <!-- WebP -->
+  <link rel="icon" type="image/webp" sizes="16x16" href="/favicons/favicon-16x16.webp">
+  <link rel="icon" type="image/webp" sizes="32x32" href="/favicons/favicon-32x32.webp">
+
+  <!-- PNG -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+
+  <!-- Favicon .ico -->
+  <link rel="shortcut icon" href="/favicons/favicon.ico">
+
   </head>
   <body>
     <Header />
