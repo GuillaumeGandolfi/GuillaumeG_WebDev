@@ -28,32 +28,43 @@ import '../assets/css/header.css';
 
 <script>
   // @ts-nocheck
-  if (typeof document !== 'undefined') {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const headerNav = document.querySelector('.header-nav');
+  if (typeof document !== "undefined") {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const headerNav = document.querySelector(".header-nav");
+  const navLinks = document.querySelectorAll(".header-nav a"); // Sélection des liens
 
-    // Toggle du menu mobile avec animation du burger
-    if (menuToggle && headerNav) {
-      menuToggle.addEventListener('click', () => {
-        headerNav.classList.toggle('active');
-        menuToggle.classList.toggle('active'); // Active l'animation du burger
+  // Toggle du menu mobile avec animation du burger
+  if (menuToggle && headerNav) {
+    menuToggle.addEventListener("click", () => {
+      headerNav.classList.toggle("active");
+      menuToggle.classList.toggle("active"); // Active l'animation du burger
+    });
+
+    // 🔹 Ferme le menu quand un lien est cliqué (sur mobile uniquement)
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        if (window.innerWidth <= 768) {
+          headerNav.classList.remove("active");
+          menuToggle.classList.remove("active");
+        }
       });
-    } else {
-      console.error('Menu toggle or navigation not found');
-    }
+    });
+  } else {
+    console.error("Menu toggle or navigation not found");
   }
 
   // Effet de scroll pour le header
-  if (typeof document !== 'undefined') {
-    const header = document.querySelector('.header');
-    const scrollThreshold = 100;
+  const header = document.querySelector(".header");
+  const scrollThreshold = 100;
 
-    window.addEventListener('scroll', () => {
+  if (header) {
+    window.addEventListener("scroll", () => {
       if (window.scrollY > scrollThreshold) {
-        header.classList.add('scrolled');
+        header.classList.add("scrolled");
       } else {
-        header.classList.remove('scrolled');
+        header.classList.remove("scrolled");
       }
     });
   }
+}
 </script>

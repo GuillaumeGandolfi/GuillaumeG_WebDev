@@ -29,6 +29,8 @@
   opacity: 1;
   transform: none;
   transition: none;
+  opacity: 0.2;
+  transition: opacity 0.3s linear;
 }
 
 @media (max-width: 1024px) {

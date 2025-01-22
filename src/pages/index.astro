@@ -434,6 +434,26 @@ import '../assets/css/contact.css';
       document.body.style.backgroundImage = "url('/textures/black-linen.webp')";
     }, 100); // Délai de 100ms pour prioriser le contenu avant l'image
   });
-  
-  </script>
-  
+
+  document.addEventListener("DOMContentLoaded", () => {
+  const paragraphs = document.querySelectorAll(".about-container p");
+
+  if (paragraphs.length > 0) {
+    window.addEventListener("scroll", () => {
+      const windowHeight = window.innerHeight;
+
+      paragraphs.forEach((p, index) => {
+        const rect = p.getBoundingClientRect();
+        const distanceFromTop = rect.top;
+
+        // Progression du scroll pour CHAQUE LIGNE (valeur entre 0 et 1)
+        let scrollProgress = Math.min(Math.max((windowHeight - distanceFromTop) / windowHeight, 0), 1);
+
+        // Appliquer progressivement l'opacité au scroll
+        p.style.opacity = scrollProgress;
+      });
+    });
+  }
+});
+
+</script>
