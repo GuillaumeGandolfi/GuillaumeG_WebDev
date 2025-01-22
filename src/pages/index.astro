@@ -428,32 +428,36 @@ import '../assets/css/contact.css';
     items.forEach((item) => observer.observe(item));
   });
   
-  // 🔥 Ajout du script pour charger dynamiquement le background après LCP
   document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
       document.body.style.backgroundImage = "url('/textures/black-linen.webp')";
-    }, 100); // Délai de 100ms pour prioriser le contenu avant l'image
+    }, 100);
   });
 
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", function () {
   const paragraphs = document.querySelectorAll(".about-container p");
 
-  if (paragraphs.length > 0) {
-    window.addEventListener("scroll", () => {
-      const windowHeight = window.innerHeight;
+  function revealOnScroll() {
+    const triggerPoint = window.innerHeight * 0.75;
+    const exitPoint = window.innerHeight * 0.25;
 
-      paragraphs.forEach((p, index) => {
-        const rect = p.getBoundingClientRect();
-        const distanceFromTop = rect.top;
+    paragraphs.forEach((para, index) => {
+      const rect = para.getBoundingClientRect();
 
-        // Progression du scroll pour CHAQUE LIGNE (valeur entre 0 et 1)
-        let scrollProgress = Math.min(Math.max((windowHeight - distanceFromTop) / windowHeight, 0), 1);
-
-        // Appliquer progressivement l'opacité au scroll
-        p.style.opacity = scrollProgress;
-      });
+      if (rect.top < triggerPoint && rect.bottom > exitPoint) {
+        setTimeout(() => {
+          para.classList.add("visible");
+        }, index * 200);
+      } else {
+        setTimeout(() => {
+          para.classList.remove("visible");
+        }, index * 200);
+      }
     });
   }
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll();
 });
 
 </script>
