@@ -5,7 +5,7 @@ import Footer from '../components/Footer.astro';
 import '../assets/css/global.css';
 
 const { 
-  title = "Développeur Web | Création de Sites Vitrines Rapides & Optimisés", 
+  title = "Création de Sites Vitrines | Développeur Web", 
   description = "Je conçois des sites web performants et optimisés pour améliorer votre visibilité et générer plus de clients. Contactez-moi pour votre projet !", 
   lang = "fr" 
 } = Astro.props;
@@ -19,19 +19,26 @@ const {
     <title>{title}</title>
     <meta name="description" content={description} />
 
-  <!-- WebP -->
-  <link rel="icon" type="image/webp" sizes="16x16" href="/favicons/favicon-16x16.webp">
-  <link rel="icon" type="image/webp" sizes="32x32" href="/favicons/favicon-32x32.webp">
+    <!-- Balise canonique -->
+    <link rel="canonical" href="https://guillaumewebdev.com">
 
-  <!-- PNG -->
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <!-- Multilingual (not for now) -->
+    <link rel="alternate" hreflang="fr" href="https://guillaumewebdev.com">
+    <link rel="alternate" hreflang="x-default" href="https://guillaumewebdev.com">
 
-  <!-- Apple Touch Icon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <!-- WebP -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="/favicons/favicon-16x16.webp">
+    <link rel="icon" type="image/webp" sizes="32x32" href="/favicons/favicon-32x32.webp">
 
-  <!-- Favicon .ico -->
-  <link rel="shortcut icon" href="/favicons/favicon.ico">
+    <!-- PNG -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+
+    <!-- Favicon .ico -->
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
 
   </head>
   <body>
