@@ -1,0 +1,14 @@
+---
+const today = new Date().toISOString().split('T')[0];
+const siteUrl = "https://guillaumewebdev.com";
+---
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <ulr>
+    <loc>{siteUrl}</loc>
+    <lastmod>{today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </ulr>
+</urlset>
